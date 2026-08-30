@@ -1,0 +1,14 @@
+.env
+fernet_key.py
+
+venv/
+__pycache__/
+*.pyc
+
+logs/
+plugins/
+
+data/raw_data/*
+data/transformed_data/*
+!data/raw_data/.gitkeep
+!data/transformed_data/.gitkeep

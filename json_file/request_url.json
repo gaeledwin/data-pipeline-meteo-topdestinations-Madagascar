@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": 47.5361,
+        "lat": -18.9137
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 296.83,
+        "feels_like": 296.06,
+        "temp_min": 296.83,
+        "temp_max": 296.83,
+        "pressure": 1019,
+        "humidity": 31,
+        "sea_level": 1019,
+        "grnd_level": 883
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 4.77,
+        "deg": 97,
+        "gust": 4.18
+    },
+    "clouds": {
+        "all": 3
+    },
+    "dt": 1786362980,
+    "sys": {
+        "country": "MG",
+        "sunrise": 1786331619,
+        "sunset": 1786372619
+    },
+    "timezone": 10800,
+    "id": 1070940,
+    "name": "Antananarivo",
+    "cod": 200
+}
