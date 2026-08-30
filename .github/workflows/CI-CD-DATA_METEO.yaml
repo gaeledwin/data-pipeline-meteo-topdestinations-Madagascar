@@ -60,7 +60,7 @@ jobs:
       AIRFLOW_WWW_USER_PASSWORD: ${{ secrets.AIRFLOW_WWW_USER_PASSWORD }}
       FERNET_KEY: ${{ secrets.FERNET_KEY }}
 
-      WEATHER_API_KEY: ${{ secrets.API_KEY }}
+      WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
 
     steps:
       - name: checkout code
