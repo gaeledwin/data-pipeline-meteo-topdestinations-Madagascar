@@ -170,4 +170,4 @@ Toutes les variables sensibles (identifiants base de données, clé API, etc.) s
 
 ## Auteur
 
-Réalisé par Gaël Edwin — projet portfolio en data engineering / data analytics.
+Réalisé par Gaël Edwin - projet portfolio en data engineering / data analytics.
