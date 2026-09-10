@@ -1,4 +1,4 @@
-# Pipeline ETL Météo — Madagascar
+# Pipeline ETL Météo - Madagascar
 
 Pipeline de données automatisé qui collecte, transforme et stocke les relevés météo en temps réel des 10 principales destinations touristiques de Madagascar, avec un dashboard Power BI pour visualiser les tendances.
 
