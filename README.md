@@ -135,13 +135,13 @@ La base PostgreSQL est organisée en 3 tables reliées entre elles :
 Le dashboard permet d'explorer les tendances météo des 10 destinations touristiques suivies.
 
 ### Vue d'ensemble
-![Vue d'ensemble du dashboard](images/dashboard-overview.jpg)
+![Vue d'ensemble du dashboard](assets/dashboard-overview.jpg)
 
 ### Types de temps et températures par ville
-![Types de temps](images/dashboard-types-temps.jpg)
+![Types de temps](assets/dashboard-types-temps.jpg)
 
 ### Vent, visibilité et nébulosité
-![Vent et nébulosité](images/dashboard-vent.jpg)
+![Vent et nébulosité](assets/dashboard-vent.jpg)
 
 ## CI/CD
 
