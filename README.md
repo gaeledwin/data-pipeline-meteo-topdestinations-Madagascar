@@ -39,7 +39,7 @@ graph LR
 
 Le DAG s'exécute automatiquement 6 fois par jour (6h, 9h, 12h, 15h, 18h, 21h, heure de Madagascar) et enchaîne 7 tâches :
 
-![Graphe du DAG Airflow](images/airflow-dag-graph.png)
+![Graphe du DAG Airflow](assets/airflow-dag-graph.png)
 
 - `extract_data_by_city_name` — appel à l'API OpenWeatherMap pour chaque destination
 - `save_to_json_raw_data` — sauvegarde des données brutes en JSON
