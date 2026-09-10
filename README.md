@@ -21,9 +21,9 @@ Pipeline de données automatisé qui collecte, transforme et stocke les relevés
 
 Le pipeline s'exécute 6 fois par jour (6h, 9h, 12h, 15h, 18h, 21h, heure de Madagascar) via un DAG Apache Airflow, en 3 étapes :
 
-1. **Extract** — récupération des données météo en temps réel via l'API OpenWeatherMap pour les 10 destinations touristiques suivies
-2. **Transform** — conversion des unités (Kelvin → Celsius, mètres → kilomètres), passage des timestamps au fuseau horaire local, structuration des données
-3. **Load** — insertion dans une base PostgreSQL, organisée en 3 tables (destinations, types de temps, relevés météo)
+1. **Extract** - récupération des données météo en temps réel via l'API OpenWeatherMap pour les 10 destinations touristiques suivies
+2. **Transform** - conversion des unités (Kelvin → Celsius, mètres → kilomètres), passage des timestamps au fuseau horaire local, structuration des données
+3. **Load** - insertion dans une base PostgreSQL, organisée en 3 tables (destinations, types de temps, relevés météo)
 
 Le pipeline est entièrement conteneurisé avec Docker, et testé automatiquement à chaque push via GitHub Actions.
 
@@ -41,13 +41,13 @@ Le DAG s'exécute automatiquement 6 fois par jour (6h, 9h, 12h, 15h, 18h, 21h, h
 
 ![Graphe du DAG Airflow](assets/airflow-dag-graph.png)
 
-- `extract_data_by_city_name` — appel à l'API OpenWeatherMap pour chaque destination
-- `save_to_json_raw_data` — sauvegarde des données brutes en JSON
-- `get_raw_data` — lecture du fichier JSON brut
-- `transform_data` — nettoyage et conversion des unités
-- `save_to_json_transformed_data` — sauvegarde des données transformées en JSON
-- `get_transformed_data` — lecture du fichier JSON transformé
-- `load_data` — insertion dans PostgreSQL
+- `extract_data_by_city_name` - appel à l'API OpenWeatherMap pour chaque destination
+- `save_to_json_raw_data` - sauvegarde des données brutes en JSON
+- `get_raw_data` - lecture du fichier JSON brut
+- `transform_data` - nettoyage et conversion des unités
+- `save_to_json_transformed_data` - sauvegarde des données transformées en JSON
+- `get_transformed_data` - lecture du fichier JSON transformé
+- `load_data` - insertion dans PostgreSQL
 
 
 ## Stack technique
@@ -163,8 +163,8 @@ Le projet utilise **GitHub Actions** pour automatiser la construction et les tes
 
 Le workflow comporte 2 jobs :
 
-1. **build-and-push-image** — construit l'image Docker du projet et la pousse sur DockerHub (taguée `latest` et avec le SHA du commit)
-2. **quality-test-and-e2e-tests** — lance l'environnement complet via Docker Compose et exécute un test end-to-end du DAG Airflow (`airflow dags test produce_data_weather.json`) pour vérifier que le pipeline s'exécute sans erreur
+1. **build-and-push-image** - construit l'image Docker du projet et la pousse sur DockerHub (taguée `latest` et avec le SHA du commit)
+2. **quality-test-and-e2e-tests** - lance l'environnement complet via Docker Compose et exécute un test end-to-end du DAG Airflow (`airflow dags test produce_data_weather.json`) pour vérifier que le pipeline s'exécute sans erreur
 
 Toutes les variables sensibles (identifiants base de données, clé API, etc.) sont stockées en tant que **secrets GitHub**, jamais en clair dans le code.
 
